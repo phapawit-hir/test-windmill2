@@ -27,6 +27,7 @@ jobs:
       # (push will pull first to detect conflicts and only push actual changes)
       - name: Pull changes
         run: |
+         deno run --unstable -A  https://deno.land/x/wmill@v1.175.0/main.ts workspace switch __automation
          deno run --unstable -A  https://deno.land/x/wmill@v1.175.0/main.ts sync pull --yes --fail-conflicts
          
           
